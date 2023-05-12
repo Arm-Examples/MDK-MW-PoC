@@ -1,0 +1,8 @@
+build-idx:
+  csolution: USB.csolution.yaml
+  cprojects:
+    - cproject: USB.cproject.yaml
+  cbuilds:
+    - cbuild: USB+Target_1.cbuild.yml
+      project: USB
+      configuration: +Target_1

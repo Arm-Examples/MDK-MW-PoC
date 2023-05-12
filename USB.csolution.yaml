@@ -1,0 +1,46 @@
+solution:
+  packs:
+    - pack: Keil::STM32F4xx_DFP
+    - pack: ARM::CMSIS
+    - pack: Keil::ARM_Compiler
+    - pack: Keil::MDK-Middleware
+    - pack: Keil::MDK-Middleware_Graphics
+   # - pack: Keil::STM32C0xx_DFP
+  target-types:
+    - type: Target_1
+      device: STM32F429ZITx
+      processor:
+        endian: little
+        fpu: "on"
+        trustzone: non-secure
+      compiler: AC6
+      debug: "on"
+      define:
+        - HSE_VALUE=8000000
+      optimize: none
+      misc:
+        - C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -std=c99
+            - -Wno-packed
+            - -Wno-missing-variable-declarations
+            - -Wno-missing-prototypes
+            - -Wno-missing-noreturn
+            - -Wno-sign-conversion
+            - -Wno-nonportable-include-path
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          ASM:
+            - -masm=auto
+          Link:
+            - --strict
+  projects:
+    - project: USB.cproject.yaml

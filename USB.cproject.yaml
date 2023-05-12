@@ -1,0 +1,51 @@
+project:
+  components:
+    - component: ARM::CMSIS:CORE
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source
+    - component: Keil::Compiler&ARM Compiler:Event Recorder&DAP
+    - component: Keil::Compiler&ARM Compiler:I/O:File&File System
+    - component: Keil::File System&MDK-Pro:CORE&LFN
+    - component: Keil::File System&MDK-Pro:Drive:USB
+    - component: Keil::USB&MDK-Pro:CORE&Release
+    - component: Keil::USB&MDK-Pro:Host
+    - component: Keil::USB&MDK-Pro:Host:MSC
+    - component: Keil::Board Support&STM32F429I-Discovery:Components:ILI9341
+    - component: Keil::Board Support&STM32F429I-Discovery:Drivers:Basic I/O
+    - component: Keil::Board Support&STM32F429I-Discovery:Drivers:SDRAM
+    - component: Keil::Board Support&STM32F429I-Discovery:LED
+    - component: Keil::Board Support&STM32F429I-Discovery:Touchscreen
+    - component: Keil::Board Support&STM32F429I-Discovery:emWin LCD&RGB IF
+    - component: Keil::CMSIS Driver:I2C
+    - component: Keil::CMSIS Driver:SPI
+    - component: Keil::CMSIS Driver:USB Host:High-speed
+    - component: Keil::Device:STM32Cube Framework:Classic
+    - component: Keil::Device:STM32Cube HAL:Common
+    - component: Keil::Device:STM32Cube HAL:Cortex
+    - component: Keil::Device:STM32Cube HAL:DMA
+    - component: Keil::Device:STM32Cube HAL:DMA2D
+    - component: Keil::Device:STM32Cube HAL:GPIO
+    - component: Keil::Device:STM32Cube HAL:I2C
+    - component: Keil::Device:STM32Cube HAL:LTDC
+    - component: Keil::Device:STM32Cube HAL:PWR
+    - component: Keil::Device:STM32Cube HAL:RCC
+    - component: Keil::Device:STM32Cube HAL:SDRAM
+    - component: Keil::Device:STM32Cube HAL:SPI
+    - component: Keil::Device:STM32Cube HAL:UART
+    - component: Keil::Device:Startup
+    - component: Keil::Graphics Display:STM32F429I-Discovery&RGB IF
+    - component: Segger::Graphics&MDK-Pro:CORE
+    - component: Segger::Graphics&MDK-Pro:Input Device:Touchscreen
+    - component: Segger::Graphics&MDK-Pro:Tools:GUI Builder
+  groups:
+    - group: Source Group 1
+      files:
+        - file: main.c
+        - file: Timer.c
+        - file: USBH_MSC.c
+        - file: USBH_MSC.h
+        - file: GUI_SingleThread.c
+        - file: LogViewerDLG.c
+        - file: Thread.c
+    - group: Scatter File
+      files:
+        - file: USB_Target_1.sct
