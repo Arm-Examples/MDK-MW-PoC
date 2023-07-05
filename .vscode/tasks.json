@@ -2,20 +2,27 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "CMSIS Build",
 			"type": "cmsis-csolution.build",
-			"project": "${command:cmsis-csolution.getCprjPath}",
-			"rebuild": false,
+			"solution": "${command:cmsis-csolution.getSolutionPath}",
+			"project": "${command:cmsis-csolution.getProjectPath}",
+			"buildType": "${command:cmsis-csolution.getBuildType}",
+			"targetType": "${command:cmsis-csolution.getTargetType}",
 			"problemMatcher": [],
-			"label": "cmsis-csolution.build: Build"
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		},
 		{
+			"label": "Flash Device",
 			"type": "embedded-debug.flash",
+			"program": "${command:embedded-debug.getApplicationFile}",
 			"serialNumber": "${command:device-manager.getSerialNumber}",
-			"program": "${workspaceFolder}/out/usb/target_1/USB.axf",
-			"cmsisPack": "C:\\Users\\ralkop01\\AppData\\Local\\Arm\\Packs\\.Download\\Keil.STM32F4xx_DFP.2.4.0.pack",
+			"cmsisPack": "Keil::STM32F4xx_DFP@2.4.0",
 			"deviceName": "STM32F429ZITx",
 			"problemMatcher": [],
-			"label": "embedded-debug.flash: Flash Device"
+			"dependsOn": "CMSIS Build"
 		},
 		{
 			"label": "echo app",
