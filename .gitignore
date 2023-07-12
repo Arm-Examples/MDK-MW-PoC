@@ -58,3 +58,4 @@ dkms.conf
 *.cbuild.yml
 *.cbuild-idx.yml
 **.cprj
+.DS_Store
