@@ -10,3 +10,4 @@ This tutorial shows how to read the contents of a text file from a USB memory st
 
 The application note explains the required steps to create the application on an [STM32F429I-Discovery](https://www.st.com/en/evaluation-tools/32f429idiscovery.html) board. Still, it can be easily ported to other underlying hardware using [MDK-Middleware](https://developer.arm.com/Tools%20and%20Software/Keil%20MDK/MDK-Middleware), [Keil RTX5](https://developer.arm.com/dev2/Tools%20and%20Software/Keil%20MDK/RTX5%20RTOS) and CMSIS.
 
+![Set up of the example](./Setup.png)
