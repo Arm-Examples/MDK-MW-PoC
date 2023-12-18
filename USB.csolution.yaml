@@ -1,7 +1,7 @@
 solution:
   packs:
     - pack: Keil::STM32F4xx_DFP
-    - pack: ARM::CMSIS
+    - pack: ARM::CMSIS@5.9.0
     - pack: Keil::ARM_Compiler
     - pack: Keil::MDK-Middleware
     - pack: Keil::MDK-Middleware_Graphics
@@ -16,7 +16,7 @@ solution:
       compiler: AC6
       debug: "on"
       define:
-        - HSE_VALUE=8000000
+        - HSE_VALUE: 8000000
       optimize: none
       misc:
         - C-CPP:
