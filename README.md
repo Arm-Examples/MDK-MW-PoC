@@ -1,4 +1,5 @@
 # Keil MDK-Middleware Proof-of-Concept
+[![CMSIS Compliance](https://img.shields.io/github/actions/workflow/status/Arm-Examples/MDK-MW-PoC/ci.yml?logo=arm&logoColor=0091bd&label=CMSIS%20Compliance)](https://www.keil.arm.com/cmsis)
 
 With the availability of more capable microcontrollers, software development for these devices has become more complex over the years. The use of real-time operating systems is rapidly becoming an industry "best practice", and integration of commercial middleware as well as the reuse of custom libraries is gaining importance for cost-efficient software engineering. Successfully combining these building blocks of a modern embedded application often poses a problem for developers.
 
